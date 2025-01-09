@@ -1,0 +1,128 @@
+#------------------------------------------------------------
+#
+# Basic Synthesis Script (TCL format)
+#                                  
+# Revision History                
+#   1/15/03  : Author Shane T. Gehring - from class example
+#   2/09/07  : Author Zhengtao Yu      - from class example
+#   12/14/07 : Author Ravi Jenkal      - updated to 180 nm & tcl
+#
+#------------------------------------------------------------
+#---------------------------------------------------------
+# Read in Verilog file and map (synthesize) onto a generic
+# library.
+# MAKE SURE THAT YOU CORRECT ALL WARNINGS THAT APPEAR
+# during the execution of the read command are fixed 
+# or understood to have no impact.
+# ALSO CHECK your latch/flip-flop list for unintended 
+# latches                                            
+#---------------------------------------------------------
+read_verilog -rtl $::env(RTL_FILES)
+Error: Required argument 'file_list' was not found (CMD-007)
+read_sverilog -rtl $::env(RTL_SV_FILES)
+Loading db file '/mnt/coe/workspace/ece/ece720-common/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/dw_foundation.sldb'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/gtech.db'
+Loading db file '/mnt/apps/public/COE/synopsys_apps/syn/T-2022.03-SP4/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'
+  Loading link library 'gtech'
+Loading sverilog file '/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'
+Running PRESTO HDLC
+Compiling source file /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv
+Opening include file /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/common.vh
+Warning:  /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv:188: signed to unsigned part selection occurs. (VER-318)
+Warning:  /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv:189: signed to unsigned part selection occurs. (VER-318)
+Warning:  /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv:190: signed to unsigned part selection occurs. (VER-318)
+Warning:  /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv:191: signed to unsigned part selection occurs. (VER-318)
+Warning:  /mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv:435: signed to unsigned conversion occurs. (VER-318)
+Warning: Could not open default SVF file /mnt/ncsudrive/r/rrgundam/564/Project_Neg/synthesis/svf/default.svf for writing.
+
+Statistics for case statements in always block at line 108 in file
+	'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           109            |    user/user     |
+===============================================
+
+Statistics for case statements in always block at line 200 in file
+	'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           216            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine MyDesign line 100 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 163 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    columns_B_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     rows_A_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|    columns_A_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|     rows_B_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 200 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+==================================================================================
+|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==================================================================================
+|  QKV_matrix_size_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| A_matrix_read_addr_reg | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| B_matrix_read_addr_reg | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| matrix_mult_count_reg  | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|   A_row_counter_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|  A_column_counter_reg  | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|   result_counter_reg   | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| matrix_change_flag_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+==================================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 297 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+========================================================================================================
+|                Register Name                 |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================================
+|              write_counter_reg               | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|           C_matrix_write_addr_reg            | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+| dut__tb__sram_scratchpad_write_address_r_reg | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+|                write_flag_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|             reset_transpose_reg              | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+========================================================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 377 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  initial_flag_reg   | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| accum_result_r_reg  | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine MyDesign line 400 in file
+		'/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/dut.sv'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| delayed_matrix_change_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully.
+Current design is now '/mnt/ncsudrive/r/rrgundam/564/Project_Neg/rtl/MyDesign.db:MyDesign'
+Loaded 1 design.
+Current design is 'MyDesign'.
+MyDesign

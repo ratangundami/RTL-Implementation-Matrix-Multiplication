@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MyDesign
+Version: T-2022.03-SP4
+Date   : Fri Nov 15 16:58:06 2024
+****************************************
+
+Operating Conditions: slow   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+Wire Load Model Mode: top
+
+  Startpoint: delayed_matrix_change_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dut__tb__sram_scratchpad_write_data[29]
+            (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  delayed_matrix_change_reg[2]/CK (SDFF_X2)             0.0000     0.0000 r
+  delayed_matrix_change_reg[2]/Q (SDFF_X2)              0.3653     0.3653 r
+  U4284/ZN (NOR2_X2)                                    0.0586     0.4239 f
+  U4283/ZN (NAND2_X2)                                   0.2344     0.6582 r
+  U4282/ZN (INV_X16)                                    0.0965     0.7548 f
+  U964/ZN (NAND2_X2)                                    0.1131     0.8678 r
+  U984/ZN (INV_X4)                                      0.0413     0.9091 f
+  U5034/ZN (AOI21_X4)                                   0.3307     1.2398 r
+  U3712/ZN (INV_X8)                                     0.0977     1.3375 f
+  U4717/ZN (XNOR2_X2)                                   0.2602     1.5976 f
+  U3963/ZN (NAND2_X4)                                   0.1725     1.7701 r
+  U2457/ZN (INV_X8)                                     0.0807     1.8508 f
+  U4364/ZN (NAND2_X1)                                   0.1251     1.9759 r
+  U3870/ZN (NAND2_X2)                                   0.0857     2.0617 f
+  U2326/ZN (INV_X2)                                     0.0826     2.1443 r
+  U906/Z (BUF_X1)                                       0.1777     2.3220 r
+  U4330/ZN (XNOR2_X2)                                   0.3320     2.6540 r
+  U3850/ZN (XNOR2_X2)                                   0.3195     2.9735 r
+  U3849/ZN (XNOR2_X2)                                   0.3291     3.3026 r
+  U4836/ZN (NAND2_X2)                                   0.1327     3.4352 f
+  U1118/ZN (INV_X4)                                     0.0647     3.4999 r
+  U4335/ZN (OAI21_X2)                                   0.0548     3.5548 f
+  U4334/ZN (NAND2_X2)                                   0.1083     3.6631 r
+  U4333/ZN (XNOR2_X2)                                   0.3024     3.9655 r
+  U4949/ZN (XNOR2_X2)                                   0.3465     4.3120 r
+  U4948/ZN (NAND2_X2)                                   0.1079     4.4199 f
+  U880/ZN (OAI21_X2)                                    0.2224     4.6423 r
+  U7272/ZN (NAND2_X2)                                   0.1424     4.7846 f
+  U7352/ZN (NAND3_X4)                                   0.1265     4.9111 r
+  U7485/ZN (XNOR2_X2)                                   0.3033     5.2144 r
+  U2024/ZN (NAND2_X2)                                   0.1180     5.3324 f
+  U2545/ZN (INV_X8)                                     0.1485     5.4809 r
+  dut__tb__sram_scratchpad_write_data[29] (out)         0.0000     5.4809 r
+  data arrival time                                                5.4809
+
+  clock clk (rise edge)                                 6.1000     6.1000
+  clock network delay (ideal)                           0.0000     6.1000
+  clock uncertainty                                    -0.0500     6.0500
+  output external delay                                -0.5660     5.4840
+  data required time                                               5.4840
+  --------------------------------------------------------------------------
+  data required time                                               5.4840
+  data arrival time                                               -5.4809
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0031
+
+
+1

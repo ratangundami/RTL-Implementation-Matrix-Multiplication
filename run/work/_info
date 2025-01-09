@@ -1,0 +1,106 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2024.2 2024.05, May 20 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/mnt/ncsudrive/r/rrgundam/564/Project_Neg/run
+T_opt
+!s110 1731706826
+V1Si`o^4>f5hKKJR4YnhgI1
+04 6 4 work tb_top fast 0
+=1-000ae431a4f1-6737bfca-11620-12db
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OE;O;2024.2;79
+vMyDesign
+Z3 2../testbench/testbench.sv|../testbench/sram.sv|../rtl/dut.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1731706821
+!i10b 1
+!s100 5oYi9H6CFiM6BNUCRzSbf1
+IQaQZ[4iZz6z415cjOAa@20
+S1
+R1
+w1731706796
+8../rtl/dut.sv
+F../rtl/dut.sv
+!i122 0
+L0 6 435
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OE;L;2024.2;79
+r1
+!s85 0
+31
+Z8 !s108 1731706820.000000
+Z9 !s107 ../rtl/common/common.vh|../rtl/dut.sv|../testbench/sram.sv|../testbench/testbench.sv|
+Z10 !s90 -sv|+incdir+../rtl/common|../testbench/testbench.sv|../testbench/sram.sv|../rtl/dut.sv|
+!i113 0
+Z11 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 -sv +incdir+../rtl/common -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@my@design
+vsram
+R3
+R4
+R5
+!i10b 1
+!s100 HZj>F?X4LWDI6ePnOV_:42
+I;^>J[_:OnD2[Q4VoXOG6;2
+S1
+R1
+Z13 w1731706772
+8../testbench/sram.sv
+F../testbench/sram.sv
+!i122 0
+L0 5 105
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
+vtb_top
+R3
+R4
+R5
+!i10b 1
+!s100 k?[YYblREUREd9:FfKQJC3
+IA<jeaz1YIFjA5V7lNf@f=0
+S1
+R1
+R13
+8../testbench/testbench.sv
+F../testbench/testbench.sv
+!i122 0
+L0 21 433
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R12
+R2
